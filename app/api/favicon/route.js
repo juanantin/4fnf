@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';
+export async function GET(){try{const r=await fetch('https://raw.githubusercontent.com/juanantin/4fnf/main/favicon.ico',{next:{revalidate:3600}});if(!r.ok)throw new Error('Missing icon');return new NextResponse(r.body,{headers:{'Content-Type':'image/x-icon','Cache-Control':'public,max-age=3600'}})}catch{return new NextResponse('Favicon unavailable',{status:502})}}
