@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';
+export async function GET(){const base=process.env.VERCEL_URL?'https://'+process.env.VERCEL_URL:'https://raw.githubusercontent.com';const url='https://raw.githubusercontent.com/juanantin/4fnf/main/family-banner.webp';try{const r=await fetch(url,{next:{revalidate:3600}});if(!r.ok)throw new Error('Image not found');return new NextResponse(r.body,{headers:{'Content-Type':'image/webp','Cache-Control':'public, max-age=3600'}})}catch{return new NextResponse('Banner unavailable',{status:502})}}
