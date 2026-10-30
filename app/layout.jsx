@@ -1,1 +1,1 @@
-import './style.css'; export const metadata={title:'Four Friends & Family | $4FNF',description:'Just family. A BNB Chain community meme token.'}; export default function Layout({children}){return <html lang="en"><body>{children}</body></html>}
+import './style.css'; export const metadata={title:'Four Friends & Family | $4FNF',description:'Just family. A BNB Chain community meme token.',icons:{icon:'/favicon.ico',shortcut:'/favicon.ico',apple:'/fnf_logo.png'}}; export default function Layout({children}){return <html lang="en"><body>{children}</body></html>}
