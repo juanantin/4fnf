@@ -40,3 +40,5 @@ footer .footer-brand img{display:block;width:135px;height:auto;max-height:130px;
 @media(max-width:760px){#vault.section{padding:34px 5%}#vault h2{font-size:40px;margin-bottom:16px}#vault .sectionhead p{margin-bottom:18px}#vault .jackpot{padding:20px 12px}#vault .big{font-size:clamp(43px,10vw,72px)}#vault .metrics article{padding:13px}}
 
 #vault .tax-usd{font:600 clamp(18px,2.4vw,30px) 'Space Grotesk',sans-serif;color:#f6e3ad;margin:2px 0 12px}
+
+.header-actions{display:flex;align-items:center;gap:10px}.copy-ca{background:transparent;border:1px solid #b28c3c;color:#f4c847;padding:15px 17px;font:800 12px 'DM Sans',sans-serif;cursor:pointer;white-space:nowrap}.copy-ca:hover{background:#342a16}@media(max-width:760px){.header-actions{gap:6px}.copy-ca{padding:11px 9px;font-size:10px}}
