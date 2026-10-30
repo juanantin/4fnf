@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';
+export async function GET(){try{const r=await fetch('https://raw.githubusercontent.com/juanantin/4fnf/main/4fnf-logo.jpg',{next:{revalidate:3600}});if(!r.ok)throw new Error('Missing logo');return new NextResponse(r.body,{headers:{'Content-Type':'image/jpeg','Cache-Control':'public,max-age=3600'}})}catch{return new NextResponse('Logo unavailable',{status:404})}}
