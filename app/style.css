@@ -16,3 +16,9 @@
 header .brand-logo{display:flex;align-items:center;justify-content:flex-start;flex-shrink:0;line-height:1}
 header .brand-logo img{display:block;width:100px;height:60px;object-fit:contain;object-position:left center}
 @media(max-width:650px){header .brand-logo img{width:76px;height:46px}}
+
+/* Consistent 4FNF emblem in header and footer */
+header .brand-logo img{width:110px;height:75px;object-fit:contain}
+footer .footer-brand{display:inline-flex;align-items:center;margin-bottom:20px}
+footer .footer-brand img{display:block;width:135px;height:auto;max-height:130px;object-fit:contain}
+@media(max-width:650px){header .brand-logo img{width:80px;height:56px}footer .footer-brand img{width:110px}}
