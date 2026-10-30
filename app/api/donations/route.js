@@ -28,8 +28,14 @@ function parseTax(hex){
  for(let i=64;i+64<=h.length;i+=64){
   if(h.slice(i,i+64)===recipient)matches.push(BigInt('0x'+h.slice(i-64,i)));
  }
- if(matches.length<2||matches[0]!==matches[1]||matches[0]===0n)throw Error('Tax accounting fields did not match expected Flap response');
- return Number(matches[0])/1e18;
+ if(matches.length<2||matches[0]===0n)throw Error('Tax accounting fields did not match expected Flap response');
+ // In the second returned struct the beneficiary is several fields after total tax.
+ const candidate=matches[0];
+ const firstIndex=h.indexOf(recipient);
+ const secondIndex=h.indexOf(recipient,firstIndex+64);
+ const preceding=h.slice(Math.max(0,secondIndex-15*64),secondIndex);
+ if(!preceding.includes(word(candidate)))throw Error('Tax total not corroborated by second on-chain read');
+ return Number(candidate)/1e18;
 }
 export async function GET(){
  try{
