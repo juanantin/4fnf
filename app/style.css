@@ -11,3 +11,8 @@
 .hero-banner-actions>span{font-weight:800;font-size:12px;letter-spacing:2px;color:#f4d17a}
 .hero-banner-actions .button{white-space:nowrap;box-shadow:0 0 20px #d9a53130}
 @media(max-width:760px){.hero.hero-banner{min-height:0!important}.hero-banner-actions{padding:15px 5%;flex-direction:column;text-align:center}.hero-banner-actions>span{font-size:10px;letter-spacing:1px}.hero-banner-actions .button{width:100%;text-align:center}}
+
+/* Branded top-left navigation logo */
+header .brand-logo{display:flex;align-items:center;justify-content:flex-start;flex-shrink:0;line-height:1}
+header .brand-logo img{display:block;width:100px;height:60px;object-fit:contain;object-position:left center}
+@media(max-width:650px){header .brand-logo img{width:76px;height:46px}}
